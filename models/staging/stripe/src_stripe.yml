@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: DM_DB
+    schema: AIRFLOW
+    tables:
+      - name: RAW_STRIPE_PAYMENT

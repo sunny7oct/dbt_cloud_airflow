@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: A clone of a Postgres application database.
+    database: DM_DB
+    schema: AIRFLOW
+    tables:
+      - name: RAW_JAFFLE_SHOP_CUSTOMERS
+        description: Raw customers data.
+      - name: RAW_JAFFLE_SHOP_ORDERS
+        description: Raw orders data.
+        loaded_at_field: _etl_loaded_at
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
