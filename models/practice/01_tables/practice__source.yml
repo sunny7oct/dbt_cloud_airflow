@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: coe
+    database: dm_db
+    schema: airflow
+    tables:
+      - name: customers
+        tests:
+          - unique
+          - not_null
+      - name: orders
+        tests:
+          - unique
+          - not_null
+      - name: payments

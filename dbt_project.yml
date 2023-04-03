@@ -38,3 +38,8 @@ models:
         +materialized: table
     staging:
       +materialized: view
+    practice:
+      00_views:
+        +materialized: view
+      01_tables:
+        +materialized: table
